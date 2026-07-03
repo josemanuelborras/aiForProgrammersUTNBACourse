@@ -1,5 +1,7 @@
 # Actividad Practica Final - IA para Programadores (Claude)
 
+Repositorio: https://github.com/josemanuelborras/aiForProgrammersUTNBACourse
+
 Implementacion independiente del modulo funcional de autenticacion para la
 actividad final, disenada y probada con asistencia de Claude (Claude Code).
 Esta version comparte el dominio (registro, login, validacion de token) con
