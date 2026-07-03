@@ -108,3 +108,22 @@ El pipeline en [`.github/workflows/ci.yml`](.github/workflows/ci.yml) ejecuta:
 1. Instalacion de dependencias.
 2. Suite de pruebas con cobertura.
 3. Publicacion de `coverage.xml` y `htmlcov/` como artefactos.
+
+Corrida real: https://github.com/josemanuelborras/aiForProgrammersUTNBACourse/actions/runs/28664597653 (success).
+Ademas del artefacto de esa corrida, se dejo una copia commiteada del reporte
+en [`coverage-report/htmlcov/index.html`](coverage-report/htmlcov/index.html).
+
+## 7. Entregables de la consigna (trazabilidad)
+
+| Requisito del enunciado | Donde esta |
+|---|---|
+| Codigo fuente del modulo | [`src/auth_module/`](src/auth_module) |
+| Pruebas unitarias | [`tests/unit/`](tests/unit) |
+| Pruebas funcionales | [`tests/functional/`](tests/functional) |
+| Pipeline de CI funcionando | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) + [run real](https://github.com/josemanuelborras/aiForProgrammersUTNBACourse/actions/runs/28664597653) |
+| Informe de cobertura | [`coverage-report/`](coverage-report) (HTML + XML de la corrida al 100%) |
+| Uso de herramienta de IA | Claude Code, ver seccion 5 arriba y [`informe.md`](informe.md#6-uso-de-ia-claude-code) |
+| Justificacion de diseno de pruebas | [`informe.md`](informe.md#2-justificación-del-diseño-de-pruebas) |
+| Analisis de cobertura antes/despues | Seccion 4 de este README + [`informe.md`](informe.md#3-análisis-de-cobertura-antes-y-después) |
+| Reflexion critica | [`informe.md`](informe.md#7-reflexión-crítica) |
+| Capturas de la ejecucion de CI | *Pendiente: adjuntar manualmente la captura de la pestana Actions del run linkeado arriba.* |

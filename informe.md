@@ -61,6 +61,18 @@ No se agregaron pruebas de carga, concurrencia o UI porque el enunciado pide
 un módulo de auth/API básica, no un sistema distribuido: agregar esos casos
 sería sobre-ingeniería para el alcance pedido.
 
+**Por qué no se usó Selenium/Playwright para las pruebas funcionales:** el
+enunciado los sugiere como herramientas de referencia, pero ambos automatizan
+un *navegador* — tienen sentido cuando el módulo expone una UI web. Este
+módulo es una API JSON pura (Flask), sin HTML ni JavaScript de por medio;
+"lo funcional" acá es el contrato HTTP (rutas, códigos de estado, forma del
+JSON de respuesta), no una interacción de usuario en pantalla. El test
+client de Flask ejercita ese contrato end-to-end (request HTTP real →
+routing → `AuthService` → response HTTP) sin necesidad de levantar un
+navegador ni un servidor real, que sería una capa de infraestructura extra
+sin valor de prueba adicional para este caso. Si el módulo entregado hubiera
+sido una app con UI, Selenium/Playwright habría sido la elección correcta.
+
 ## 3. Análisis de cobertura antes y después
 
 | Archivo | Baseline | Final |
@@ -136,6 +148,12 @@ y el workflow corrió exitosamente:
 
 **Run:** https://github.com/josemanuelborras/aiForProgrammersUTNBACourse/actions/runs/28664597653
 **Resultado:** `ci` — `completed` / `success`.
+
+Además del artefacto que sube el propio pipeline, se commiteó una copia del
+reporte de esa misma corrida (100% de cobertura) directo en el repositorio,
+en [`coverage-report/`](coverage-report/htmlcov/index.html) (`index.html` +
+`coverage.xml`), para que quede visible sin depender de descargar el
+artefacto de Actions.
 
 > Nota para la entrega: la captura de pantalla de esta corrida (pestaña
 > *Actions* del repo) debe adjuntarse manualmente al informe final, ya que
