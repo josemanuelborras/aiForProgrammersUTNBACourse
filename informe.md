@@ -149,15 +149,13 @@ y el workflow corrió exitosamente:
 **Run:** https://github.com/josemanuelborras/aiForProgrammersUTNBACourse/actions/runs/28664597653
 **Resultado:** `ci` — `completed` / `success`.
 
+![Job test del workflow ci.yml en verde, 17s](ci-run-success.png)
+
 Además del artefacto que sube el propio pipeline, se commiteó una copia del
 reporte de esa misma corrida (100% de cobertura) directo en el repositorio,
 en [`coverage-report/`](coverage-report/htmlcov/index.html) (`index.html` +
 `coverage.xml`), para que quede visible sin depender de descargar el
 artefacto de Actions.
-
-> Nota para la entrega: la captura de pantalla de esta corrida (pestaña
-> *Actions* del repo) debe adjuntarse manualmente al informe final, ya que
-> no hay forma de generar esa imagen desde este entorno.
 
 ## 6. Uso de IA (Claude Code)
 

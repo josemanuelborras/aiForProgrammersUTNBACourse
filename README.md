@@ -126,4 +126,4 @@ en [`coverage-report/htmlcov/index.html`](coverage-report/htmlcov/index.html).
 | Justificacion de diseno de pruebas | [`informe.md`](informe.md#2-justificación-del-diseño-de-pruebas) |
 | Analisis de cobertura antes/despues | Seccion 4 de este README + [`informe.md`](informe.md#3-análisis-de-cobertura-antes-y-después) |
 | Reflexion critica | [`informe.md`](informe.md#7-reflexión-crítica) |
-| Capturas de la ejecucion de CI | *Pendiente: adjuntar manualmente la captura de la pestana Actions del run linkeado arriba.* |
+| Capturas de la ejecucion de CI | [`ci-run-success.png`](ci-run-success.png), embebida en [`informe.md`](informe.md#5-integración-en-cicd) |
